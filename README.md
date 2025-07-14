@@ -1,60 +1,68 @@
-MERN Task Manager
+📚 Gestionnaire de Tâches - Stack MERN
 
-Table of Contents
-Features
-Tools and Technologies
-Dependencies
-Dev-dependencies
-Prerequisites
-Installation and setup
-Backend API
-frontend pages
-npm scripts
-Useful Links
+🔖 Table des matières
+
+Fonctionnalités
+Outils et technologies
+Dépendances
+Dépendances de développement
+
+Prérequis
+Installation et configuration
+API backend
+Pages frontend
+Scripts npm
+Liens utiles
 Contact
-Features
-User-side features
-Signup
-Login
-Logout
-Add tasks
-View tasks
-Update tasks
-Delete tasks
-Developer-side features
-Toasts for success and error messages
-Form validations in frontend and backend
-Fully Responsive Navbar
-Token based Authentication
-Use of 404 page for wrong urls
-Relevant redirects
-Global user state using Redux
-Custom Loaders
-Use of layout component for pages
-Use of theme colors
-No external CSS files needed (made using Tailwind CSS)
-Usage of Tooltips
-Dynamic document titles
-Redirect to previous page after login
-Use of various React hooks
-Custom hook also used (useFetch)
-Routes protection
-Middleware for verifying the user in backend
-Use of different HTTP status codes for sending responses
-Standard pratices followed
-Tools and Technologies
+
+✅ Fonctionnalités
+
+👤 Côté utilisateur :
+Inscription
+Connexion
+Déconnexion
+Ajouter des tâches
+Afficher les tâches
+Mettre à jour les tâches
+Supprimer des tâches
+
+👨‍💻 Côté développeur :
+
+Affichage de messages de succès et d'erreur (toasts)
+Validation des formulaires côté client et serveur
+Barre de navigation responsive
+Authentification via JWT (JSON Web Token)
+Page 404 pour les URL non valides
+Redirections pertinentes selon l’état utilisateur
+État utilisateur global géré avec Redux
+Loaders personnalisés
+Composant de mise en page (Layout) pour structurer les pages
+Utilisation d’un thème de couleurs via Tailwind CSS
+Aucune feuille CSS externe nécessaire
+Info-bulles (Tooltips) pour plus de clarté
+Titres de pages dynamiques
+Redirection vers la dernière page après connexion
+Utilisation de hooks React natifs et personnalisés (useFetch)
+Protection des routes privées
+Middleware backend pour vérification des utilisateurs
+Réponses API avec des codes HTTP appropriés
+Bonnes pratiques de développement respectées
+
+🛠️ Outils et technologies
 HTML
 CSS
-Javascript
+JavaScript
 Tailwind CSS
 Node.js
 Express.js
 React
 Redux
-Mongodb
-Dependencies
-Following are the major dependencies of the project:
+MongoDB
 
+📦 Dépendances principales
+bash
+Copier
+Modifier
 axios
 react
 react-dom
@@ -69,176 +77,83 @@ dotenv
 express
 jsonwebtoken
 mongoose
-Dev-dependencies
-Following are the major dev-dependencies of the project:
 
+🧪 Dépendances de développement
+bash
+Copier
+Modifier
 nodemon
-concurrently
-Prerequisites
-Node.js must be installed on the system.
-You should have a MongoDB database.
-You should have a code editor (preferred: VS Code)
-Installation and Setup
-Install all the dependencies
+concurrently (pour exécuter frontend + backend en même temps)
 
+🧰 Prérequis
+Node.js installé sur le système
+Une base de données MongoDB (locale ou via MongoDB Atlas)
+Un éditeur de code (recommandé : VS Code)
+
+⚙️ Installation et configuration
+Installer toutes les dépendances du projet (frontend + backend) :
+
+bash
+Copier
+Modifier
 npm run install-all
-Create a file named ".env" inside the backend folder. Add data from .env.example file and substitute your credentials there.
+Créer un fichier .env dans le dossier backend :
+Copie le contenu de .env.example
+Renseigne :
+MONGO_URI
+JWT_SECRET
+PORT (facultatif)
 
-Start the application
-
+Démarrer le projet (backend + frontend) :
+bash
+Copier
+Modifier
 npm run dev
-Go to http://localhost:3000
+Ouvrir le navigateur à l’adresse :
+arduino
+Copier
+Modifier
+http://localhost:3000
 
-Backend API
-- POST     /api/auth/signup
-- POST     /api/auth/login
-- GET      /api/tasks
-- GET      /api/tasks/:taskId
-- POST     /api/tasks
-- PUT      /api/tasks/:taskId
-- DELETE   /api/tasks/:taskId
-- GET      /api/profile
-Frontend pages
-- /                 Home Screen (Public home page for guests and private dashboard (tasks) for logged-in users)
-- /signup           Signup page
-- /login            Login page
-- /tasks/add        Add new task
-- /tasks/:taskId    Edit a task
-npm scripts
-At root:
+🔌 API Backend
+Méthode	Route	Description
+POST	/api/auth/signup	Créer un compte utilisateur
+POST	/api/auth/login	Connexion utilisateur
+GET	/api/tasks	Récupérer toutes les tâches
+GET	/api/tasks/:taskId	Récupérer une tâche spécifique
+POST	/api/tasks	Ajouter une tâche
+PUT	/api/tasks/:taskId	Mettre à jour une tâche
+DELETE	/api/tasks/:taskId	Supprimer une tâche
+GET	/api/profile	Obtenir le profil utilisateur
 
-npm run dev: Starts both backend and frontend
-npm run dev-server: Starts only backend
-npm run dev-client: Starts only frontend
-npm run install-all: Installs all dependencies and dev-dependencies required at root, at frontend and at backend.
-Inside frontend folder:
+🌐 Pages Frontend
+URL	Fonction
+/	Page d’accueil (publique ou tableau des tâches privé)
+/signup	Page d'inscription
+/login	Page de connexion
+/tasks/add	Formulaire d'ajout d’une tâche
+/tasks/:taskId	Modifier une tâche existante
 
-npm start: Starts frontend in development mode
-npm run build: Builds the frontend for production to the build folder
-npm test: Launches the test runner in the interactive watch mode
-npm run eject: This will remove the single build dependency from the frontend.
-Inside backend folder:
-
-npm run dev: Starts backend using nodemon.
-npm start: Starts backend without nodemon.
-Table of Contents
-Features
-Tools and Technologies
-Dependencies
-Dev-dependencies
-Prerequisites
-Installation and setup
-Backend API
-frontend pages
-npm scripts
-Useful Links
-Contact
-Features
-User-side features
-Signup
-Login
-Logout
-Add tasks
-View tasks
-Update tasks
-Delete tasks
-Developer-side features
-Toasts for success and error messages
-Form validations in frontend and backend
-Fully Responsive Navbar
-Token based Authentication
-Use of 404 page for wrong urls
-Relevant redirects
-Global user state using Redux
-Custom Loaders
-Use of layout component for pages
-Use of theme colors
-No external CSS files needed (made using Tailwind CSS)
-Usage of Tooltips
-Dynamic document titles
-Redirect to previous page after login
-Use of various React hooks
-Custom hook also used (useFetch)
-Routes protection
-Middleware for verifying the user in backend
-Use of different HTTP status codes for sending responses
-Standard pratices followed
-Tools and Technologies
-HTML
-CSS
-Javascript
-Tailwind CSS
-Node.js
-Express.js
-React
-Redux
-Mongodb
-Dependencies
-Following are the major dependencies of the project:
-
-axios
-react
-react-dom
-react-redux
-react-router-dom
-react-toastify
-redux
-redux-thunk
-bcrypt
-cors
-dotenv
-express
-jsonwebtoken
-mongoose
-Dev-dependencies
-Following are the major dev-dependencies of the project:
-
-nodemon
-concurrently
-Prerequisites
-Node.js must be installed on the system.
-You should have a MongoDB database.
-You should have a code editor (preferred: VS Code)
-Installation and Setup
-Install all the dependencies
-
-npm run install-all
-Create a file named ".env" inside the backend folder. Add data from .env.example file and substitute your credentials there.
-
-Start the application
-
-npm run dev
-Go to http://localhost:3000
-
-Backend API
-- POST     /api/auth/signup
-- POST     /api/auth/login
-- GET      /api/tasks
-- GET      /api/tasks/:taskId
-- POST     /api/tasks
-- PUT      /api/tasks/:taskId
-- DELETE   /api/tasks/:taskId
-- GET      /api/profile
-Frontend pages
-- /                 Home Screen (Public home page for guests and private dashboard (tasks) for logged-in users)
-- /signup           Signup page
-- /login            Login page
-- /tasks/add        Add new task
-- /tasks/:taskId    Edit a task
-npm scripts
-At root:
-
-npm run dev: Starts both backend and frontend
-npm run dev-server: Starts only backend
-npm run dev-client: Starts only frontend
-npm run install-all: Installs all dependencies and dev-dependencies required at root, at frontend and at backend.
-Inside frontend folder:
-
-npm start: Starts frontend in development mode
-npm run build: Builds the frontend for production to the build folder
-npm test: Launches the test runner in the interactive watch mode
-npm run eject: This will remove the single build dependency from the frontend.
-Inside backend folder:
-
-npm run dev: Starts backend using nodemon.
-npm start: Starts backend without nodemon.
+📜 Scripts npm
+À la racine du projet :
+bash
+Copier
+Modifier
+npm run dev           # Lance backend + frontend ensemble
+npm run dev-server    # Lance uniquement le backend
+npm run dev-client    # Lance uniquement le frontend
+npm run install-all   # Installe toutes les dépendances des 3 parties
+Dans le dossier frontend/ :
+bash
+Copier
+Modifier
+npm start             # Démarrage du frontend en mode développement
+npm run build         # Construction du frontend pour la production
+npm test              # Lancement des tests React
+npm run eject         # Éjecte le projet de Create React App (non réversible)
+Dans le dossier backend/ :
+bash
+Copier
+Modifier
+npm run dev           # Lance le backend avec nodemon (hot reload)
+npm start 
