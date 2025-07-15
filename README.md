@@ -1,244 +1,90 @@
-MERN Task Manager
+# 📝 Task Manager - MERN Stack "Application-Task-Management-MERN "
 
-Table of Contents
-Features
-Tools and Technologies
-Dependencies
-Dev-dependencies
-Prerequisites
-Installation and setup
-Backend API
-frontend pages
-npm scripts
-Useful Links
-Contact
-Features
-User-side features
-Signup
-Login
-Logout
-Add tasks
-View tasks
-Update tasks
-Delete tasks
-Developer-side features
-Toasts for success and error messages
-Form validations in frontend and backend
-Fully Responsive Navbar
-Token based Authentication
-Use of 404 page for wrong urls
-Relevant redirects
-Global user state using Redux
-Custom Loaders
-Use of layout component for pages
-Use of theme colors
-No external CSS files needed (made using Tailwind CSS)
-Usage of Tooltips
-Dynamic document titles
-Redirect to previous page after login
-Use of various React hooks
-Custom hook also used (useFetch)
-Routes protection
-Middleware for verifying the user in backend
-Use of different HTTP status codes for sending responses
-Standard pratices followed
-Tools and Technologies
-HTML
-CSS
-Javascript
-Tailwind CSS
-Node.js
-Express.js
-React
-Redux
-Mongodb
-Dependencies
-Following are the major dependencies of the project:
+Une application de gestion de tâches complète construite avec la pile **MERN** (MongoDB, Express.js, React, Node.js). 
+Les utilisateurs peuvent s'inscrire, se connecter, créer des listes de tâches, fixer des échéances, et suivre leur progression.
+![A MERN application for basic tasks management.](image/USERIMAGE.png)
 
-axios
-react
-react-dom
-react-redux
-react-router-dom
-react-toastify
-redux
-redux-thunk
-bcrypt
-cors
-dotenv
-express
-jsonwebtoken
-mongoose
-Dev-dependencies
-Following are the major dev-dependencies of the project:
+---
 
-nodemon
-concurrently
-Prerequisites
-Node.js must be installed on the system.
-You should have a MongoDB database.
-You should have a code editor (preferred: VS Code)
-Installation and Setup
-Install all the dependencies
+## 🚀 Démo
 
-npm run install-all
-Create a file named ".env" inside the backend folder. Add data from .env.example file and substitute your credentials there.
+- Frontend (Vercel) : [(https://vercel.com/malaks-projects)](https://vercel.com/malaks-projects-55ad8473/application-task-manager-mern)
 
-Start the application
 
-npm run dev
-Go to http://localhost:3000
+## 🛠️ Technologies utilisées
 
-Backend API
-- POST     /api/auth/signup
-- POST     /api/auth/login
-- GET      /api/tasks
-- GET      /api/tasks/:taskId
-- POST     /api/tasks
-- PUT      /api/tasks/:taskId
-- DELETE   /api/tasks/:taskId
-- GET      /api/profile
-Frontend pages
-- /                 Home Screen (Public home page for guests and private dashboard (tasks) for logged-in users)
-- /signup           Signup page
-- /login            Login page
-- /tasks/add        Add new task
-- /tasks/:taskId    Edit a task
-npm scripts
-At root:
+- **Frontend** : React, Axios, React Router
+- **Backend** : Express.js, Node.js, JWT, MongoDB
+- **Base de données** : MongoDB Atlas
+- **Déploiement** : Vercel (Frontend), Render (Backend)
 
-npm run dev: Starts both backend and frontend
-npm run dev-server: Starts only backend
-npm run dev-client: Starts only frontend
-npm run install-all: Installs all dependencies and dev-dependencies required at root, at frontend and at backend.
-Inside frontend folder:
+---
 
-npm start: Starts frontend in development mode
-npm run build: Builds the frontend for production to the build folder
-npm test: Launches the test runner in the interactive watch mode
-npm run eject: This will remove the single build dependency from the frontend.
-Inside backend folder:
+## 📦 Fonctionnalités
 
-npm run dev: Starts backend using nodemon.
-npm start: Starts backend without nodemon.
-Table of Contents
-Features
-Tools and Technologies
-Dependencies
-Dev-dependencies
-Prerequisites
-Installation and setup
-Backend API
-frontend pages
-npm scripts
-Useful Links
-Contact
-Features
-User-side features
-Signup
-Login
-Logout
-Add tasks
-View tasks
-Update tasks
-Delete tasks
-Developer-side features
-Toasts for success and error messages
-Form validations in frontend and backend
-Fully Responsive Navbar
-Token based Authentication
-Use of 404 page for wrong urls
-Relevant redirects
-Global user state using Redux
-Custom Loaders
-Use of layout component for pages
-Use of theme colors
-No external CSS files needed (made using Tailwind CSS)
-Usage of Tooltips
-Dynamic document titles
-Redirect to previous page after login
-Use of various React hooks
-Custom hook also used (useFetch)
-Routes protection
-Middleware for verifying the user in backend
-Use of different HTTP status codes for sending responses
-Standard pratices followed
-Tools and Technologies
-HTML
-CSS
-Javascript
-Tailwind CSS
-Node.js
-Express.js
-React
-Redux
-Mongodb
-Dependencies
-Following are the major dependencies of the project:
+- 🔐 Authentification avec JWT (inscription / connexion)
+- ✅ Création, modification et suppression de tâches
+- 📆 Gestion des échéances
+- 📊 Suivi de progression (tâches complétées / non complétées)
+- 👤 Dashboard utilisateur personnalisé
+- 🌐 API REST sécurisée
 
-axios
-react
-react-dom
-react-redux
-react-router-dom
-react-toastify
-redux
-redux-thunk
-bcrypt
-cors
-dotenv
-express
-jsonwebtoken
-mongoose
-Dev-dependencies
-Following are the major dev-dependencies of the project:
+---
 
-nodemon
-concurrently
-Prerequisites
-Node.js must be installed on the system.
-You should have a MongoDB database.
-You should have a code editor (preferred: VS Code)
-Installation and Setup
-Install all the dependencies
+## 📁 Arborescence du projet
 
-npm run install-all
-Create a file named ".env" inside the backend folder. Add data from .env.example file and substitute your credentials there.
+/Application-Task-Management-MERN
+├── client/ # React frontend
+├── server/ # Node.js + Express backend
+├── README.md
 
-Start the application
+## ⚙️ Installation en local
 
-npm run dev
-Go to http://localhost:3000
+### 1. Clone le projet
 
-Backend API
-- POST     /api/auth/signup
-- POST     /api/auth/login
-- GET      /api/tasks
-- GET      /api/tasks/:taskId
-- POST     /api/tasks
-- PUT      /api/tasks/:taskId
-- DELETE   /api/tasks/:taskId
-- GET      /api/profile
-Frontend pages
-- /                 Home Screen (Public home page for guests and private dashboard (tasks) for logged-in users)
-- /signup           Signup page
-- /login            Login page
-- /tasks/add        Add new task
-- /tasks/:taskId    Edit a task
-npm scripts
-At root:
+```bash
+git clone https://github.com/malakmedfai/Application-Task-Management-MERN.git
 
-npm run dev: Starts both backend and frontend
-npm run dev-server: Starts only backend
-npm run dev-client: Starts only frontend
-npm run install-all: Installs all dependencies and dev-dependencies required at root, at frontend and at backend.
-Inside frontend folder:
+cd mern-task-**manager**
 
-npm start: Starts frontend in development mode
-npm run build: Builds the frontend for production to the build folder
-npm test: Launches the test runner in the interactive watch mode
-npm run eject: This will remove the single build dependency from the frontend.
-Inside backend folder:
+2. Backend (Express.js)
+cd server
+npm install
 
-npm run dev: Starts backend using nodemon.
-npm start: Starts backend without nodemon.
+Crée un fichier .env :
+mongodb+srv://medfaimalak:07976923malak@cluster0.lidiuut.mongodb.net/MERN-task-manage?retryWrites=true&w=majority&MERN-task-manage=Cluster0
+MONGODB_URL=mongodb://localhost:27017/MERN-task-manager
+PORT=5000
+
+Lance le serveur :
+node server.js
+
+3. Frontend (React)
+cd ../client
+npm install
+
+Crée un fichier .env :
+REACT_APP_API_URL=http://localhost:5000
+
+Lance le client React :
+npm start
+
+🌍 Déploiement
+
+📤 Backend (Render)
+Créer un nouveau Web Service
+
+Ajouter les variables d'environnement MONGO_URI et JWT_SECRET
+
+Start command : node server.js
+
+🌐 Frontend (Vercel)
+Importer le projet depuis GitHub
+
+Répertoire : client
+
+Build : npm run build
+
+Output : build
+
+Ajouter REACT_APP_API_URL pointant vers le backend Render
